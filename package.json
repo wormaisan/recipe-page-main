@@ -1,5 +1,36 @@
 {
+  "name": "verstka_structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
   "dependencies": {
-    "webpack": "^5.89.0"
-  }
+    "cross-env": "^7.0.3",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "filemanager-webpack-plugin": "^8.0.0",
+    "image-webpack-loader": "^8.1.0",
+    "postcss-loader": "^7.0.2",
+    "pug": "^3.0.2",
+    "pug-plugin": "^4.9.4",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "scripts": {
+    "serve": "webpack serve --open --mode development",
+    "prod": "cross-env NODE_ENV=production webpack --mode development --progress",
+    "dev": "cross-env NODE_ENV=development webpack --mode development --progress",
+    "clear": "rd /s /q dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
 }

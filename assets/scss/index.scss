@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+}
+
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --nutmeg: hsl(14, 45%, 36%);
+  --darkRaspberry: hsl(332, 51%, 32%);
+  --roseWhite: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --lightGrey: hsl(30, 18%, 87%);
+  --wengeBrown: hsl(30, 10%, 34%);
+  --darkCharcoal: hsl(24, 5%, 18%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: hsl(292, 42%, 14%);
+  font-size: 16px;
+}
+
+img {
+  object-fit: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.attribution{
+  padding: 20px 0;
+  background-color: var(--lightPink);
+}
+
+
+@import "index_adaptation";
