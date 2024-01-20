@@ -1,7 +1,6 @@
 const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
-const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
 const FileManagerPlugin = require('filemanager-webpack-plugin');
@@ -15,7 +14,6 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode: devMode,
-  target: target,
   devtool: devtool,
 
   entry: {
@@ -115,10 +113,10 @@ module.exports = {
     new PugPlugin({
       pretty: mode === 'development',  //код в выходном файле в читабельном виде
       css: {
-        filename: 'assets/css/[name].[contenthash:8].css',
+        filename: 'assets/css/[name].css',
       },
       js: {
-        filename: 'assets/js/[name].[contenthash:8].js',
+        filename: 'assets/js/[name].js',
         use: 'babel-loader',
       },
     }),
