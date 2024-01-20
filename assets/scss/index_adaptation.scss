@@ -1,5 +1,28 @@
 @media (max-width: 375px) {
 
+  .recipe {
+    padding: 0;
+  }
 
+  .recipe__item {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .recipe__itemBody {
+    padding: 31px;
+  }
+
+  .recipe__img {
+    padding-bottom: 0;
+
+    img {
+      border-radius: 0;
+    }
+  }
+
+  .recipe__title {
+    font-size: 36px;
+  }
 
 }

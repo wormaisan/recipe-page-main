@@ -43,12 +43,24 @@
 }
 
 body {
-  color: hsl(292, 42%, 14%);
+  color: hsl(30, 10%, 34%);
   font-size: 16px;
+  font-family: Outfit, sans-serif;
 }
 
 img {
   object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  background-color: hsl(30, 18%, 87%);
+  border: none;
+  height: 1px;
+  margin: 33px 0 25px;
 }
 
 .wrapper {
@@ -71,6 +83,173 @@ img {
 .attribution{
   padding: 20px 0;
   background-color: var(--lightPink);
+}
+
+.blockTitle {
+  font-family: YoungSerif, sans-serif;
+  font-weight: 400;
+  color: var(--nutmeg);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.blockList {
+  padding-left: 8px;
+
+  li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      margin-right: 28px;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+    }
+  }
+
+  span {
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.recipe {
+  background-color: var(--eggshell);
+}
+
+.recipe {
+  padding: 130px 0;
+}
+
+.recipe__item {
+  background-color: var(--white);
+  max-width: 735px;
+  border-radius: 23px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.recipe__itemBody {
+  background-color: var(--white);
+}
+
+.recipe__img {
+  background-color: var(--white);
+  overflow: hidden;
+  padding-bottom: 30px;
+
+  img {
+    border-radius: 12px;
+    max-height: 300px;
+  }
+}
+
+.recipe__title {
+  font-family: YoungSerif, sans-serif;
+  color: var(--darkCharcoal);
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.recipe__description {
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.recipe__preparation {
+  border-radius: 15px;
+  background-color: var(--roseWhite);
+  padding: 24px 28px 30px;
+  margin-bottom: 27px;
+}
+
+.recipe__preparationTitle {
+  color: var(--darkRaspberry);
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.recipe__preparationList {
+
+  li {
+
+    &::before {
+      background-color: var(--darkRaspberry);
+    }
+  }
+}
+
+.recipe__ingredientsList {
+
+  li {
+
+    &::before {
+      background-color: var(--nutmeg);
+    }
+  }
+}
+
+.recipe__instructionsList {
+  counter-reset: num;
+
+  li {
+    margin-bottom: 7px;
+    align-items: flex-start;
+    line-height: 1.5;
+
+    &::before {
+      content: counter(num) '.';
+      counter-increment: num;
+      color: var(--nutmeg);
+      font-weight: 700;
+    }
+  }
+}
+
+.recipe__nutritionDescription {
+  margin-bottom: 15px;
+}
+
+.recipe__nutritionTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  td {
+    border-bottom: 1px solid var(--lightGrey);
+    padding: 13px 30px;
+
+    &:last-child {
+      color: var(--nutmeg);
+      font-weight: 700;
+      width: 53%;
+    }
+  }
+}
+
+
+.footer {
+  background-color: var(--eggshell);;
 }
 
 

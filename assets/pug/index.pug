@@ -3,13 +3,13 @@ extends ./components/layout
 block variables
     -
         var preparationList = [
-          '<span>Total</span>: Approximately <time datetime="10m">10 minutes</time>',
-          '<span>Preparation</span>: <time datetime="5m">5 minutes</time>',
-          '<span>Cooking</span>: <time datetime="5m">5 minutes</time>',
+          '<span>Total</span>: Approximately&nbsp;<time datetime="10m">10 minutes</time>',
+          '<span>Preparation</span>:&nbsp;<time datetime="5m">5 minutes</time>',
+          '<span>Cooking</span>:&nbsp;<time datetime="5m">5 minutes</time>',
         ];
 
         var ingredientsList = [
-            '2 - 3 large eggs',
+            '2-3 large eggs',
             'Salt, to taste',
             'Pepper, to taste',
             '1 tablespoon of butter or oil',
@@ -48,38 +48,43 @@ block content
             section.recipe
                 .container
                     .recipe__body
-                        .recipe__img
-                            img(src=require("/assets/images/image-omelette.jpeg") alt="omelette" title="omelette" height="100%" width="100%" loading="lazy" decoding="async")
-                        h1.recipe__title Simple Omelette Recipe
-                        .recipe__description
-                            |An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
-                            |to perfection, optionally filled with your choice of cheese, vegetables, or meats.
-                        .recipe__preparation
-                            h3.recipe__preparationTitle Preparation time
-                            ul.recipe__preparationList
-                              each val in preparationList
-                                li!=val
-                        .recipe__ingredients
-                            h2.recipe__ingredientsTitle Ingredients
-                            ul.recipe__ingredientsList
-                              each val in ingredientsList
-                                li=val
-                        hr
-                        .recipe__instructions
-                            h2.recipe__instructionsTitle Instructions
-                            ol.recipe__instructionsList
-                              each val in instructionsList
-                                li!=val
-                        hr
-                        .recipe__nutrition
-                            h2.recipe__nutritionTitle Nutrition
-                            .recipe__nutritionDescription The table below shows nutritional values per serving without the additional fillings.
-                            table.recipe__nutritionTable
-                                tbody
-                                  each val in nutritionTable
-                                    tr
-                                      td=val.name
-                                      td=val.value
+                        .recipe__item
+                            .recipe__img
+                                img(src=require("/assets/images/image-omelette.jpeg") alt="omelette" title="omelette" height="100%" width="100%" loading="lazy" decoding="async")
+                            .recipe__itemBody
+                                h1.recipe__title Simple Omelette Recipe
+                                .recipe__description
+                                    |An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+                                    |to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+                                .recipe__preparation
+                                    h3.recipe__preparationTitle Preparation time
+                                    ul.recipe__preparationList.blockList
+                                      each val in preparationList
+                                        li
+                                            span!=val
+                                .recipe__ingredients
+                                    h2.recipe__ingredientsTitle.blockTitle Ingredients
+                                    ul.recipe__ingredientsList.blockList
+                                      each val in ingredientsList
+                                          li
+                                              span!=val
+                                hr
+                                .recipe__instructions
+                                    h2.recipe__instructionsTitle.blockTitle  Instructions
+                                    ol.recipe__instructionsList.blockList
+                                      each val in instructionsList
+                                          li
+                                              span!=val
+                                hr
+                                .recipe__nutrition
+                                    h2.recipe__nutritionTitle.blockTitle  Nutrition
+                                    .recipe__nutritionDescription The table below shows nutritional values per serving without the additional fillings.
+                                    table.recipe__nutritionTable
+                                        tbody
+                                          each val in nutritionTable
+                                            tr
+                                              td=val.name
+                                              td=val.value
 
         footer.footer
             .container
