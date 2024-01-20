@@ -19,7 +19,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/](https://www.frontendmentor.io/solutions/scss-pug-webpack-PchFOKmC_D)
 - Live Site URL: [https://wormaisan.github.io/recipe-page-main/](https://wormaisan.github.io/recipe-page-main/)
 
 ## My process
